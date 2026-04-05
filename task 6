@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main (){
+
+    int n =10;
+    int arr[n];
+      int arr2[n];
+      int i , j ;
+    for (int i =0;i<n;i++){
+       printf("enter %d number = ",i+1);
+       scanf("%d",&arr[i]);
+    }
+
+    for (int i =0, j =n-1;i<n,j>=0;i++,j--){
+     arr2[i]=arr[j];
+    }
+
+     printf("out put= ");
+     for (int i =0;i<n-1;i++){
+
+       printf("%d,",arr2[i]);
+    }
+           printf("%d",arr2[n-1]);
+
+return 0 ;
+}
