@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main (){
+
+    int dublicate =0 ;
+    int digit , num;
+    int real_digit[10]={0};
+
+    printf("enter the number = ");
+    scanf("%d",&num);
+
+  while(num>0){
+    digit=num%10;
+    real_digit[digit]++;
+    num=num/10;
+  }
+
+    for (int i =0;i<10;i++){
+          if(real_digit[i]>1){
+            dublicate++;
+          }
+    }
+
+     printf("duplicate = %d" ,dublicate);
+
+return 0 ;
+}
