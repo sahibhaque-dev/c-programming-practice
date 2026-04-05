@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main (){
+
+    int n= 2,sum=0;
+
+    int arr[n][n];
+
+printf("\n");
+        printf("Input elements in the first matrix:\n ");
+    for (int i =0;i<n;i++){
+               for (int j =0;j<n;j++){
+       printf(" Element - [%d],[%d] : ",i,j);
+       scanf("%d",&arr[i][j]);
+               }
+    }
+
+  printf("\n");
+
+    for (int i =0;i<n;i++){
+               sum+=arr[i][n-i-1];
+    }
+
+printf("Addition of the right Diagonal elements is:%d ",sum);
+
+return 0 ;
+}
