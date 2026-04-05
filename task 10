@@ -1,0 +1,43 @@
+#include<stdio.h>
+int main (){
+
+    int n ;
+    printf("Input the size of the square matrix (less than 5): ");
+        scanf("%d",&n);
+
+    int arr[n][n];
+    int arr2[n][n];
+     int arr3[n][n];
+printf("\n");
+        printf("Input elements in the first matrix:\n ");
+    for (int i =0;i<n;i++){
+               for (int j =0;j<n;j++){
+       printf(" Element - [%d],[%d] : ",i,j);
+       scanf("%d",&arr[i][j]);
+               }
+    }
+    printf("\n");
+     printf("Input elements in the 2nd matrix:\n ");
+    for (int i =0;i<n;i++){
+               for (int j =0;j<n;j++){
+       printf(" Element - [%d],[%d] : ",i,j);
+       scanf("%d",&arr2[i][j]);
+               }
+    }
+
+    for (int i =0;i<n;i++){
+               for (int j =0;j<n;j++){
+                    arr3[i][j]=0;
+                    arr3[i][j]+= arr[i][j]+arr2[i][j];
+               }
+    }
+  printf("\n");
+     printf("The Addition of two matrix is:\n");
+    for (int i =0;i<n;i++){
+               for (int j =0;j<n;j++){
+       printf(" %d \t",arr3[i][j]);
+               }
+                    printf("\n");
+    }
+return 0 ;
+}
