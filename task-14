@@ -1,0 +1,56 @@
+
+#include<stdio.h>
+int main (){
+
+    int n1 , n2;
+    int flag =1 ;
+
+    printf("Input number of Rows for the matrix:  =  ");
+    scanf("%d",&n1);
+    printf("Input number of Columns for the matrix: =  ");
+    scanf("%d",&n2);
+
+    int arr[n1][n2];
+
+printf("\n");
+        printf("Input elements in the matrix:\n ");
+    for (int i =0;i<n1;i++){
+               for (int j =0;j<n2;j++){
+       printf(" Element - [%d],[%d] : ",i,j);
+       scanf("%d",&arr[i][j]);
+               }
+    }
+
+  printf("\n");
+
+  if(n1!=n2){
+    flag=0;
+  }
+  else{
+       for(int i =0;i<n1;i++){
+               for (int j =0;j<n2;j++){
+                    if((i==j)&&(arr[i][j]!=1)){
+                    flag=0;
+                    }
+               else if ((i!=j)&&(arr[i][j]!=0)){
+                flag=0;
+               }
+               }
+  }
+  }
+int i ,j;
+    printf("\nThe matrix is:\n");
+    for(i = 0; i < n1; i++) {
+        for(j = 0; j < n2; j++) {
+            printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }
+    if(flag == 1) {
+        printf("The matrix is an identity matrix.");
+    } else {
+        printf("The matrix is not an identity matrix.");
+    }
+
+return 0 ;
+}

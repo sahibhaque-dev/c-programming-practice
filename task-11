@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main (){
+
+    int n= 2;
+
+    int arr[n][n];
+    int arr2[n][n];
+     int arr3[n][n];
+printf("\n");
+        printf("Input elements in the first matrix:\n ");
+    for (int i =0;i<n;i++){
+               for (int j =0;j<n;j++){
+       printf(" Element - [%d],[%d] : ",i,j);
+       scanf("%d",&arr[i][j]);
+               }
+    }
+    printf("\n");
+     printf("Input elements in the 2nd matrix:\n ");
+    for (int i =0;i<n;i++){
+               for (int j =0;j<n;j++){
+       printf(" Element - [%d],[%d] : ",i,j);
+       scanf("%d",&arr2[i][j]);
+               }
+    }
+
+    for (int i =0;i<n;i++){
+               for (int j =0;j<n;j++){
+                    arr3[i][j]=0;
+            for (int k =0;k<n;k++){
+
+                    arr3[i][j]+= arr[i][k]*arr2[k][j];
+            }
+               }
+    }
+  printf("\n");
+     printf("The multiplication of two matrix is:\n");
+    for (int i =0;i<n;i++){
+               for (int j =0;j<n;j++){
+       printf(" %d \t",arr3[i][j]);
+               }
+                    printf("\n");
+    }
+
+return 0 ;
+}
